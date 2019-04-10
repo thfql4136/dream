@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wine</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e50710521bdba057752faf9a302249da"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e50710521bdba057752faf9a302249da&libraries=clusterer"></script>
+  <script src="/__/firebase/5.7.0/firebase-app.js"></script>
+  <script src="/__/firebase/5.7.0/firebase-auth.js"></script>
+  <script src="/__/firebase/5.7.0/firebase-database.js"></script>
+  <script src="/__/firebase/5.7.0/firebase-messaging.js"></script>
+  <script src="/__/firebase/5.7.0/firebase-storage.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+
+</head>
+
+<body>
+  <div class="loader">
+    <div>
+      <span class="fa fa-spin fa-spinner "></span>
+    </div>
+  </div>
+  <header class="clear" >
+    <div class="logo_wrap clear page">
+      <div class="logo">
+      <img src="../img/logo.png" alt="img" class="img">
+    </div>
+    </div>
+    
+    
+    <ul class="login">
+      <li><a href="#">JOIN</a></li>
+      <li>|</li>
+      <li><a href="#">LOGIN</a></li>
+    </ul>
+    <div class="navs navs_mo">
+      <div><i class="fa fa-bars"></i></div>
+  </div>
+    <div class="gnb">
+      <ul class="about en">
+        <li><a href="#">GLASS & BEVERAGE</a></li>
+        <li><a href="#">NEWS & EVENT</a></li>
+        <li><a href="#">ALL ABOUT WINE</a></li>
+        <li><a href="#">WINE LIST </a></li>
+        <li><a href="#">ABOUT</a></li>
+      </ul>
+      <div class="menu_hover">
+        <ul>
+          <li><a href="#">슈피겔라우</a></li>
+          <li><a href="#">VOSS</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Notice</a></li>
+          <li><a href="#">Event</a></li>
+          <li><a href="#">Story in Wine</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">구매문의</a></li>
+          <li><a href="#">e-Catalog</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">All About Wine</a></li>
+          <li><a href="#">Wine FAQ</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">와인리스트</a></li>
+          <li><a href="#">와인추천</a></li>
+          <li><a href="#">니혼슈리스트</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">매장안내</a></li>
+        </ul>
+      </div>
+    </div>
+   
+  <ul class="navs_mo navs_sub">
+    <li><a href="#">GLASS & BEVERAGE</a></li>
+    <li><a href="#">NEWS & EVENT</a></li>
+    <li><a href="#">ALL ABOUT WINE</a></li>
+    <li><a href="#">WINE LIST </a></li>
+    <li><a href="#">ABOUT</a></li>
+  </ul>
+  </header>
+  <section class="banners" >
+    <div class="banner"> 
+        <div class="ban_cont">
+            <img src="../img/ban_icon.png" class="img">
+            <div class="ban_btn wh">
+             <a href="#">SHOP MORE</a> 
+              </div>
+          </div>
+      <div class="ban_pro">
+          <div class="ban_top">
+            <p>17%</p>
+          </div>
+          <div class="grape">
+            <img src="../img/grape.png" alt="img" class="img">
+          </div>
+        <div class="prod">
+          <img src="../img/thumb.jpg" alt="img" class="img">
+        </div>
+        <div class="prod_cont">
+                <span>Castello di Querceto </span>
+                <span>Chianti Classico Unicorn</span>
+      </div>
+      <div class="prod_cont2 clear">
+        <div class="itary it">Itary</div>
+        <div class="price">￦ 50,000</div>
+      </div>
+      <ul class="prod_cont3 clear">
+        <li class="	fas fa-star purple"></li>
+        <li class="	fas fa-star purple"></li>
+        <li class="	fas fa-star purple"></li>
+        <li class="	fas fa-star purple"></li>
+        <li class="	fas fa-star purple"></li>
+      </ul>
+      <div class="prod_cont4 clear">
+        <div class="more">more</div>
+        <div class="cart">
+          <div class="far fa-heart"></div>
+          <div>
+              <div class="fas fa-shopping-cart"></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+      <ul class="slides" id="slides1">
+        <li class="slide"><img src="../img/wine_bg.jpg" alt="img" class="img"></li>
+        <li class="slide"><img src="../img/wine_bg2.jpg" alt="img" class="img"></li>
+        <li class="slide"><img src="../img/wine_bg3.jpg" alt="img" class="img"></li>
+        <li class="slide"><img src="../img/wine_bg4.jpg" alt="img" class="img"></li>
+        <li class="slide"><img src="../img/wine_bg.jpg" alt="img" class="img"></li>
+      </ul>
+    </div>
+    <div class="nav">
+      <ul>
+        <li class="menu clear" data-now="1">
+            <div class="menu_img1"><img src="../img/wine2.png"></div>
+            <div class="menu_tit">BEST SELLERS <div class="line"></div></div>
+        </li>
+        <li class="menu" data-now="2">
+              <div class="menu_img2"><img src="../img/wine-bottle2.png"></div>
+              <div class="menu_tit">WINE TIME <div class="line"></div></div>
+        </li>
+        <li class="menu" data-now="3">
+              <div class="menu_img3"><img src="../img/filter2.png"></div>
+              <div class="menu_tit">FIND STORE <div class="line"></div></div>
+        </li>
+        <li class="menu" data-now="4">
+              <div class="menu_img4"><img src="../img/wine-glasses2.png"></div>
+              <div class="menu_tit">WINE MAP<div class="line"></div></div>
+        </li>
+        <li class="menu" data-now="5">
+              <div class="menu_img5"><img src="../img/bucket2.png"></div>
+              <div class="menu_tit">EVENT WINE<div class="line"></div></div>
+        </li>
+        <li class="menu last" data-now="6">
+              <div class="menu_img6"><img src="../img/wine-barrel2.png"></div>
+              <div class="menu_tit">SNS WINE <div class="line"></div></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="products page" id="page1">
+    <div class="product">
+      <div class="title en best">BEST SELLERS</div>
+      
+    </div>
+  </section>
+  <section class="dec_wrap page" id="page2">
+    <div class="dec">
+      <div class="title en wine_time">WINE TIME</div>
+      <div class="box_wrap clear">
+        <div class="box">
+          <div class="time1 time" data-ani="wine"><img src="../img/time1.png" class="img"></div>
+          <div class="time2 time" data-ani="wine"><img src="../img/time2.png" class="img"></div>
+          <div class="time3 time" data-ani="wine"><img src="../img/time3.png" class="img"></div>
+          <div class="time4"><img src="../img/time4.png" class="img"></div>
+          <div class="time5"><img src="../img/time5.png" class="img"></div>
+          <div class="time6"><img src="../img/time6.png" class="img"></div>
+          <div class="wine_mark"><img src="../img/wine_mark.png" class="img"></div>
+        </div>
+        <div class="table">
+          <div class="cell kr">
+            <h4>와인과 함께하는 여유로운 시간이 있는 곳, 와인타임</h4>
+            <p>와인타임(Winetime)은 ‘와인과 함께 하는 여유로운 시간’ 이라는 의미와 시사주간지의 대명사인 Time지와 같은 위상을
+              가진 와인 샵을 지향한다는 두가지의 의미를 가지고 지난 1997년 첫발을 내디딘 와인 전문샵입니다.
+              압구정, 송파점, 종로점, 여의도점, 삼성점, 판교점, 부산점 총 7개의 직영점을 운영하고 있으며, 와인 전문
+              교육을 이수한 직원들이 상주하여 고객님들의 취향에 따른 1:1 맞춤 서비스를 제공해드립니다.
+              <span>최상의 조건에서 보관되고 있는 세계 각국 500여 종의 와인은 구대륙 그랑크뤼 와인에서부터 신대륙 컬트 와인에
+                  이르기까지 다양한 구색을 자랑하며, 특히 나파 밸리를 필두로 한 Joseph Phelps, Heitz Cellars,
+                  Dominus, Stag’s Leap Wine Cellars, Caymus, Far Niente, Shafer, Chateau Montelena 등
+                  최정상급 미국 와인 포트폴리오는 미국 현지 와인 샵을 능가합니다.
+                  이 밖에 약 500년의 역사를 가진 독일의 ‘슈피겔라우(Spiegelau)’와인 글라스와
+                  명품 워터브랜드 ‘보스(Voss)’등 와인과 관련된 모든 것을 취급하고 있습니다.</span>
+              </p>
+          </div>  
+        </div>   
+      </div>
+    </div>
+  </section>
+  <section class="store_wrap page" id="page3">
+    <div class="store">
+      <div class="title en wh find_store">FIND STORE</div>
+      <ul class="store_box clear">
+        <li>
+          <img src="../img/store_bg.png" >
+        </li>
+        <li>
+          <div>SEARCH STORE</div>
+          <div>압구정점 <i class="fas fa-search"></i></div>
+        </li>
+        <li>
+          <div>와인타임 압구정점</div>
+          <div>강남구 도산대로 37길 26 1층 (신사동, 램프빌딩)</div>
+          <div>전화번호 02-548-3720</div>
+          <div>영업시간 평일 10:00 A.M. ~ 09:00 P.M.</div>
+          <div>토요일 11:00 A.M. ~ 06:00 P.M.</div>
+          <div>일요일 및 공휴일 휴무</div>
+        </li>
+        <li>
+          <div id="map" style="width:96%;height:96%;"></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="map_wrap page" id="page4">
+    <div class="map_cover">
+    <div class="map">
+      
+      <div class="title en tit_map wine_map">WINE MAP</div>
+      <div class="map_table">
+        <div class="map_cell">
+          <p>와이너리는 전세계에 걸쳐 분포하지만 좋은 와이너리들은 거의 대부분 북위 30도와 40도에 걸쳐 분포하고 있다. 극지방은 포도를 재배하기에 너무 춥고 <br>
+            적도는 너무 더워서 적당하지 않아 좋은
+            와인 산지는 한정될 수 밖에 없다. 전세계적으로 30여 개의 와인 생산국이 있다. 프랑스,<br>
+            이탈리아, 스페인, 포르투칼, 독일 비롯한 구대륙과 미국, 칠레, 아르헨티나의 신대륙, 최근에는 중국, 일본 등도 와인을 생산한다.
+            <span>유럽은 한때 오랜 전통을 이어오며<br>
+            발전된 와인 양조방법으로 세계 와인 시장에서 주연의 자리를 놓친 적이 거의 없지만 1970년대에 이르러서 미국을 비롯한 많은
+            신세계 국가들이 혁신적인 마케팅과 새로운 <br>
+            와인 제조 방법을 앞세워 하나 둘씩 합류하면서 더 많은 스타일의 다양한 와인을 접할 수 있게 되었다. 그러나 중요한 것은 전통이든 혁신이든 와인에 대한 열정과 사랑이다.
+          </span>
+          </p>
+           
+        </div>
+      </div>
+      <div class="icon canada">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont canada_cont">
+          캐나다
+        </div>
+      </div>
+      <div class="icon america">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont america_cont">
+          미국
+        </div>
+      </div>
+      <div class="icon zealand">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont zealand_cont">
+          뉴질랜드
+        </div>
+      </div>
+      <div class="icon australia">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont australia_cont">
+          호주
+        </div>
+      </div>
+      <div class="icon africa">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont africa_cont">
+          남아프리카
+        </div>
+      </div>
+      <div class="icon argentina">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont argentina_cont">
+          아르헨티나
+        </div>
+      </div>
+      <div class="icon chile">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="icon_cont chile_cont">
+          칠레
+        </div>
+      </div>
+      <i class="fas fa-map-marker-alt big"></i>
+      <div class="icon france">
+        
+        <div class="icon_cont france_cont">
+          프랑스
+        </div>
+        <div class="icon_cont italiana_cont">
+          이탈리아
+        </div>
+        <div class="icon_cont germany_cont">
+          독일
+        </div>
+        <div class="icon_cont spain_cont">
+          스페인
+        </div>
+        <div class="icon_cont portugal_cont">
+          포루투칼
+        </div>
+        <ul class="icon_cont greece_cont">
+          <li>그리스</li>
+          <li>영국</li>
+          <li>오스트리아</li>
+          <li>스위스</li>
+          <li>불가리아</li>
+          <li>헝가리</li>
+          <li>터키</li>
+          <li>이스라엘</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="event_wrap page" id="page5">
+    <div class="event">
+      <div class="evnet_box">
+        <div class="title en event_tit event_wine">EVENT WINE</div>
+        <div class="sale">
+          <p>Top wines on Sale This Month!</p>
+          <p>UP TO 50% OFF</p>
+          <div class="sale_cont clear">
+            <div class="sale_lt">
+              <span>NOM</span>
+              <span class="kr">26</span>
+            </div>
+            <div class="sale_rt">
+              <span>ADGIO VERTICAL TASTING</span>
+            </div>
+          </div>
+          <div class="sale_btn wh">
+            MORE
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="sns_wrap page" id="page6">
+    <div class="sns">
+      <div class="title en sns_tit sns_wine">SNS WINE</div>
+      <div class="sns_box clear">
+        <div class="sns_lt">
+          <div class="clear">
+            <ul class="sns_small">
+              <li><img src="../img/wine-890370_1920.jpg"></li>
+              <li><img src="../img/wine-791133_1920.jpg"></li>
+              <li><img src="../img/grapes-690230_1920.jpg"></li>
+            </ul>
+            <ul class="sns_mid">
+              <li><img src="../img/wine-bar-2139973_1920.jpg"></li>
+              <li><img src="../img/glass-3109246_1920.jpg"></li>
+              <li><img src="../img/food-2359699_1920.jpg"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sns_rt">
+          <div class="clear">
+            <ul class="sns_small2">
+              <li><img src="../img/still-life-1964461_1920.jpg"></li>
+              <li><img src="../img/still-life-2905834_1920.jpg"></li>
+              <li><img src="../img/ceremony-407153_1920.jpg"></li>
+            </ul>
+            <ul class="sns_mid2">
+              <li><img src="../img/wine-2242526_1920.jpg"></li>
+              <li><img src="../img/people-2572965_1920.jpg"></li>
+              <li><img src="../img/cape-lode-2654051_1920.jpg"></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+  </section>
+  <footer class="clear wh">
+    <ul class="foot_txt clear">
+      <li><i class="fab fa-facebook-f"></i></li>
+      <li><i class="fab fa-instagram"></i></li>
+      <li><i class="fab fa-pinterest"></i></li>
+      <li><i class="fab fa-twitter"></i></li>
+      <li>입사지원 </li>
+      <li>기념 와인 및 대량 구매 문의</li>
+      <li><span>Family </span>
+        <span>v</span> </li>
+    </ul>
+    <ul class="foot_txt2 clear">
+      <li>개인정보처리방침</li>
+      <li>|</li>
+      <li>주류통신 판매에 대한 명령</li>
+      <li>|</li>
+      <li>COPYRIGHT WINETIME 2018 ALL RIGHTS RESERVED.</li>
+    </ul>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
